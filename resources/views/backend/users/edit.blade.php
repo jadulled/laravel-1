@@ -9,7 +9,7 @@
                 <div class="box box-primary">
 
                     <div class="box-header">
-                        <h3 class="box-title">{{ $user->present()->fullName }}</h3>
+                        <h3 class="box-title">{{ $user->name }}</h3>
                     </div>
 
                     @include('backend.users.partials.form')

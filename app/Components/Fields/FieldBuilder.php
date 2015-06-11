@@ -6,9 +6,7 @@ use Collective\Html\FormBuilder as Form;
 use Illuminate\View\Factory as View;
 use Illuminate\Session\Store as Session;
 
-
-class FieldBuilder
-{
+class FieldBuilder {
 
     protected $form;
     protected $view;
@@ -25,6 +23,25 @@ class FieldBuilder
         $this->form = $form;
         $this->view = $view;
         $this->session = $session;
+    }
+
+    public function deleteButton($entity, $route = null)
+    {
+        $id = 'deleteButton_' . str_random();
+
+        if($route === null)
+        {
+            $entity_class = get_class($entity);
+            $entity_class = class_basename($entity_class);
+
+            $entity_route = strtolower($entity_class);
+            $entity_route = str_plural($entity_route);
+
+            $route = 'admin.' . $entity_route . '.destroy';
+
+        }
+
+        return $this->view->make('components.fields.delete-button', compact('id', 'entity', 'route'));
     }
 
     public function getDefaultClass($type)
@@ -67,14 +84,18 @@ class FieldBuilder
 
     public function buildControl($type, $name, $value = null, $attributes = array(), $options = array())
     {
-
-        switch ($type)
+        if(ends_with($type, 'Group'))
+        {
+            $attributes['placeholder'] = $this->buildLabel($name);
+        }
+        $type_aux = str_replace('Group', '', $type);
+        switch ($type_aux)
         {
             case 'select':
-                $options = array('' => 'Seleccione') + $options;
+                $options = array('' => \Lang::get('app.select')) + $options;
                 return $this->form->select($name, $options, $value, $attributes);
             case 'selectYesNo':
-                $options = array('' => 'Select', '1' => 'Yes', '0' => 'No');
+                $options = array('' => \Lang::get('app.select'), '1' => 'Yes', '0' => 'No');
                 return $this->form->select($name, $options, $value, $attributes);
             case 'password':
                 return $this->form->password($name, $attributes);
@@ -82,10 +103,6 @@ class FieldBuilder
                 return $this->form->checkbox($name, $value, isset($attributes['checked']), $attributes);
             case 'textarea':
                 return $this->form->textarea($name, $value, $attributes);
-            case 'number':
-                return $this->form->number($name, $value, $attributes);
-            case 'radio':
-                return $this->form->radio($name, $value, $attributes);
             default:
                 return $this->form->input($type, $name, $value, $attributes);
         }
