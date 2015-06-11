@@ -1,0 +1,20 @@
+/*
+    Give a border to avatar on some cases
+*/
+.avatar{
+    border: 1px solid #ccc;
+}
+
+/*
+    Set all tables vertical align on the TD tag
+*/
+.table tbody tr td{
+    vertical-align: middle;
+}
+
+/*
+    Change cursor to pointer over a event in calendar
+*/
+.fc-event{
+    cursor: pointer;
+}

@@ -1,0 +1,58 @@
+<?php
+
+return [
+    'select' => 'Seleccione',
+    'record' => 'Registro',
+    'new'   => 'Nuevo',
+    'edit'  => 'Editar',
+    'save'  => 'Guardar',
+    'update'=> 'Actualizar',
+    'delete-confirm-message' => 'Realmente deseas eliminar este registro?',
+    'delete-user' => 'Eliminar usuario',
+    'user-management' => 'Administrador de usuarios',
+    'user' => 'Usuario',
+    'users' => 'Usuarios',
+    'avatar' => 'Avatar',
+    'name'  => 'Nombre',
+    'email' => 'Correo electrónico',
+    'delete' => 'Eliminar',
+    'cancel' => 'Cancelar',
+    'edit-user' => 'Editar usuario',
+    'new-user' => 'Nuevo usuario',
+    'dashboard' => 'Panel de control',
+    'slideshow' => 'Slide de imágenes',
+    'nav-menu' => 'MENÚ DE NAVEGACIÓN',
+    'status' => 'Status',
+    'created' => 'Creado',
+    'title' => 'Titulo',
+    'images' => 'Imágenes',
+    'image' => 'Imagen',
+    'news' => 'Boletines',
+    'delete-slide'=> 'Eliminar imagen',
+    'edit-slide-content' => 'Editar imagen',
+    'add-new-slide-image' => 'Agregar una nueva imagen',
+    'preview' => 'Vista previa',
+    'post-management' => 'Boletines',
+    'new-post' => 'Crear un nuevo boletin',
+    'published-by' => 'Piblicado por:',
+
+    'description' => 'Descripción',
+    'photos' => 'Tu foto con el candidato',
+    'add-new-photo' => 'Agregar nueva foto',
+    'delete-photo' => 'Eliminar foto',
+
+
+    'confirm_delete' => '¿Confirma eliminar este elemento?',
+	'item_updated' => '¡Elemento actualizado con éxito!',
+	'item_created' => '¡Elemento creado con éxito!',
+	'item_deleted' => '¡Elemento eliminado con éxito!',
+    'item_change_status' => '¡El status del elemento se a cambiado con éxito',
+
+    'payment_method' => 'Información de pago',
+    'card_number' => 'Numero de tarjeta',
+    'card_cvc' => 'Codigo de seguridad',
+    'cancel' => 'Cancelar',
+    'submit' => 'Enviar',
+
+
+];
