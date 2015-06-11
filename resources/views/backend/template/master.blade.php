@@ -19,7 +19,7 @@
             @include('backend.template.header.header')
             @include('backend.template.aside.aside')
             @include('backend.template.content.content')
-            {{--@include('backend.template.footer') --}}
+            @include('backend.template.footer')
 
         </div>
 
