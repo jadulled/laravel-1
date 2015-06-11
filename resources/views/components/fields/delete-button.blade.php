@@ -1,7 +1,7 @@
 
 <button type="button" class="btn btn-app no-margin" data-toggle="modal" data-target="#{{ $id }}"><i class="fa fa-trash-o"></i> Eliminar</button>
 
-<div class="modal modal-danger fade" id="{{ $id }}" tabindex="-1" role="dialog" aria-labelledby="{{ $id }}Label" aria-hidden="true">
+<div class="modal fade" id="{{ $id }}" tabindex="-1" role="dialog" aria-labelledby="{{ $id }}Label" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -13,8 +13,8 @@
                     ¿Confirma eliminar este elemento?
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">No, Cancelar</button>
-                    <button type="submit" class="btn btn-outline ">Si, Eliminar</button>
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger ">Eliminar</button>
                 </div>
             {!! Form::close() !!}
         </div>

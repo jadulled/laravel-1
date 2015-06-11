@@ -38,7 +38,7 @@ class UserManager extends BaseManager
             unset($data['password']);
         }
 
-        $this->generateSlug($data, 'name');
+        $data = $this->generateSlug($data, 'name');
 
         return $data;
     }
