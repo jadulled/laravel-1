@@ -104,31 +104,18 @@ return [
 
     'attributes' => [
         'name' => 'nombre',
-        'last' => 'apellidos',
         'email' => 'correo electrónico',
         'password' => 'contraseña',
         'password_confirmation' => 'confirme contraseña',
         'phone' => 'teléfono',
         'message' => 'mensaje',
-
-        'last_name' => 'apellidos',
-        'club'  => 'club rotario',
-        'badge_name' => 'nombre de gafete',
-        'district'  => 'distrito',
         'address'   => 'dirección',
         'city'  => 'ciudad',
         'state' => 'estado',
         'zip'   => 'código postal',
         'country'   => 'país',
-        'phone' => 'teléfono',
         'cell' => 'celular',
-        'name[]' => 'Nombre',
-        'last_name[]' => 'apellidos',
-        'relation[]' => 'relación',
-        'email_confirmation' => 'confirme correo electrónico',
-        'password' => 'contraseña',
-        'club_id' => 'club rotario',
-        'name_no_listed' => 'mi nombre no esta en la lista',
+        'type' => 'tipo',
      ],
 
 ];
